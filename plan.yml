@@ -1,0 +1,13 @@
+name: plan
+
+on:
+  workflow_call:
+
+jobs:
+  plan:
+    name: Plan
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Plan Summary
+      run: echo 'Plan complete'

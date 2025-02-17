@@ -1,0 +1,14 @@
+name: Deploy Dev
+
+on:
+  workflow_call:
+
+jobs:
+  plan:
+    name: Plan
+    uses: gidavies-org/reusable-viz/.github/workflows/plan.yml@main
+
+  deploy:
+    name: Deploy
+    uses: gidavies-org/reusable-viz/.github/workflows/deploy.yml@main
+    needs: plan
