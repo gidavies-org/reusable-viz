@@ -7,6 +7,11 @@ jobs:
   plan:
     name: Plan
     uses: gidavies-org/reusable-viz/.github/workflows/plan.yml@main
+    strategy:
+      matrix:
+        environment: [dev, staging, prod]
+    with:
+      environment: ${{ matrix.environment }}
 
   deploy:
     name: Deploy
