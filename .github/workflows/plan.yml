@@ -2,7 +2,11 @@ name: plan
 
 on:
   workflow_call:
-
+    inputs:
+      environment:
+        required: true
+        type: string
+        
 jobs:
   plan:
     name: Plan
@@ -10,4 +14,4 @@ jobs:
 
     steps:
     - name: Plan Summary
-      run: echo 'Plan complete'
+      run: echo 'Plan for ${{ inputs.environment }} complete'

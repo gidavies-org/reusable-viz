@@ -2,6 +2,10 @@ name: deploy
 
 on:
   workflow_call:
+    inputs:
+      environment:
+        required: true
+        type: string
 
 jobs:
   plan:
@@ -10,4 +14,4 @@ jobs:
 
     steps:
     - name: Deploy Summary
-      run: echo 'Deploy complete'
+      run: echo 'Deploy to ${{ inputs.environment }} complete'

@@ -12,3 +12,8 @@ jobs:
     name: Deploy
     uses: gidavies-org/reusable-viz/.github/workflows/deploy.yml@main
     needs: plan
+    strategy:
+      matrix:
+        environment: [dev, staging, prod]
+    with:
+      environment: ${{ matrix.environment }}
