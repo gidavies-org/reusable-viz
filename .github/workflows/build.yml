@@ -19,3 +19,4 @@ jobs:
   deploy-dev:
     name: deploy-dev
     uses: gidavies-org/reusable-viz/.github/workflows/deploy-dev.yml@main
+    needs: build
