@@ -23,5 +23,5 @@ jobs:
     strategy:
         matrix:
           environment: [dev, staging, prod]
-      with:
-        environment: ${{ matrix.environment }}
+    with:
+      environment: ${{ matrix.environment }}
